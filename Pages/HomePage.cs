@@ -32,9 +32,26 @@ namespace seleniumeasy_Test.Pages
         public IWebElement CheckBoxText => Driver.FindElement(By.CssSelector("#txtAge"));
         public IWebElement CheckAll => Driver.FindElement(By.CssSelector("#check1"));
 
+        //RADIO BUTTONS TEST ELEMENTS
+        public IWebElement RadioButton_Male => Driver.FindElement(By.CssSelector("#easycont > div > div.col-md-6.text-left > div:nth-child(4) > div.panel-body > label:nth-child(2) > input[type=radio]"));
+        public IWebElement RadioButton_Female => Driver.FindElement(By.CssSelector("#easycont > div > div.col-md-6.text-left > div:nth-child(4) > div.panel-body > label:nth-child(3) > input[type=radio]"));
+        public IWebElement GenderCheckButton => Driver.FindElement(By.Id("buttoncheck"));
+        public IWebElement GenderCheckResult => Driver.FindElement(By.ClassName("radiobutton"));
+        public IWebElement GroupRadioResult => Driver.FindElement(By.ClassName("groupradiobutton"));
+        public IWebElement GroupRadio_Gender => Driver.FindElement(By.ClassName("radio-inline"));
+        public IWebElement GetValuesButton => Driver.FindElement(By.CssSelector("#easycont > div > div.col-md-6.text-left > div:nth-child(5) > div.panel-body > button"));
+        public IWebElement Group_Male => Driver.FindElement(By.CssSelector("#easycont > div > div.col-md-6.text-left > div:nth-child(5) > div.panel-body > div:nth-child(2) > label:nth-child(2) > input[type=radio]"));
+        public IWebElement Group_Female => Driver.FindElement(By.CssSelector("#easycont > div > div.col-md-6.text-left > div:nth-child(5) > div.panel-body > div:nth-child(2) > label:nth-child(3) > input[type=radio]"));
+        public IWebElement AgeGroup1 => Driver.FindElement(By.CssSelector("#easycont > div > div.col-md-6.text-left > div:nth-child(5) > div.panel-body > div:nth-child(3) > label:nth-child(2) > input[type=radio]"));
+        public IWebElement AgeGroup2 => Driver.FindElement(By.CssSelector("#easycont > div > div.col-md-6.text-left > div:nth-child(5) > div.panel-body > div:nth-child(3) > label:nth-child(3) > input[type=radio]"));
+        public IWebElement AgeGroup3 => Driver.FindElement(By.CssSelector("#easycont > div > div.col-md-6.text-left > div:nth-child(5) > div.panel-body > div:nth-child(3) > label:nth-child(4) > input[type=radio]"));
+
+
         //CLICKS
         public void ClickHome() => DemoHomeBtn.Click(); //Demo home button
         public void ClickCheckbox() => Checkbox.Click();
+        public void ClickGenderCheck() => GenderCheckButton.Click();
+        public void ClickGetValues() => GetValuesButton.Click();
 
         //METHODS
 

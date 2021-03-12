@@ -5179,11 +5179,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\38595\\Desktop\\SeleniumEasy Git\\seleniumeasy_Test\\seleniumeasy_Test.csproj",
+      "projectUniqueName": "C:\\Users\\38595\\Desktop\\SeleniumEasy Git\\seleniumeasy_Test\\seleniumEasy_Test\\seleniumeasy_Test.csproj",
       "projectName": "seleniumeasy_Test",
-      "projectPath": "C:\\Users\\38595\\Desktop\\SeleniumEasy Git\\seleniumeasy_Test\\seleniumeasy_Test.csproj",
+      "projectPath": "C:\\Users\\38595\\Desktop\\SeleniumEasy Git\\seleniumeasy_Test\\seleniumEasy_Test\\seleniumeasy_Test.csproj",
       "packagesPath": "C:\\Users\\38595\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\38595\\Desktop\\SeleniumEasy Git\\seleniumeasy_Test\\obj\\",
+      "outputPath": "C:\\Users\\38595\\Desktop\\SeleniumEasy Git\\seleniumeasy_Test\\seleniumEasy_Test\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

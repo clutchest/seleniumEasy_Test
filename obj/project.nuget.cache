@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "E0MDadGTFYCDxU+6tK0HhSEXA24Wg0mIHICKmSeTW2xedl8YecnKi5pNcfJ2JQ0fX3YowAJkkGHJD8e7Nud9XA==",
+  "dgSpecHash": "+ZnCTBzyWIx98aTA8dqP/Mm2AzQGNXoOQ0k9CUSRpU0UlxRQLpErrAn0o5CG8ONhswgnlUnhvh/kKsi6CAUJQw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\38595\\Desktop\\SeleniumEasy Git\\seleniumeasy_Test\\seleniumeasy_Test.csproj",
+  "projectFilePath": "C:\\Users\\38595\\Desktop\\SeleniumEasy Git\\seleniumeasy_Test\\seleniumEasy_Test\\seleniumeasy_Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\38595\\.nuget\\packages\\anglesharp\\0.14.0\\anglesharp.0.14.0.nupkg.sha512",
     "C:\\Users\\38595\\.nuget\\packages\\dotnetseleniumextras.waithelpers\\3.11.0\\dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",
