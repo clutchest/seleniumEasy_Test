@@ -110,5 +110,11 @@ namespace seleniumeasy_Test.Tests
             }
 
         }
+
+        [TearDown]
+        public void CloseDriver()
+        {
+            Driver.Quit();
+        }
     }
 }

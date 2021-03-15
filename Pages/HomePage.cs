@@ -1,4 +1,7 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
+using seleniumeasy_Test.Tests;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,11 +15,6 @@ namespace seleniumeasy_Test.Pages
         {
             Driver = webDriver;
         }
-
-
-        //MAIN ELEMENTS 
-        public IWebElement DemoHomeBtn => Driver.FindElement(By.CssSelector("body > div:nth-child(1) > div:nth-child(2) > nav > div > div.navbar-header > div > a"));
-
 
         //SIMPLE FORM TEST ELEMENTS
         public int sum;
@@ -46,9 +44,15 @@ namespace seleniumeasy_Test.Pages
         public IWebElement AgeGroup2 => Driver.FindElement(By.CssSelector("#easycont > div > div.col-md-6.text-left > div:nth-child(5) > div.panel-body > div:nth-child(3) > label:nth-child(3) > input[type=radio]"));
         public IWebElement AgeGroup3 => Driver.FindElement(By.CssSelector("#easycont > div > div.col-md-6.text-left > div:nth-child(5) > div.panel-body > div:nth-child(3) > label:nth-child(4) > input[type=radio]"));
 
+        //DROPDOWN TEST ELEMENTS
+        public IWebElement DropdownMessage => Driver.FindElement(By.ClassName("selected-value"));
+        public SelectElement DaysDropdown;
+        public SelectElement StatesList;
+        public void ClickFirstSelected() => Driver.FindElement(By.Id("printMe")).Click();
+        public void ClickAllSelected() => Driver.FindElement(By.Id("printAll")).Click();
+        public string MultiMessage => Driver.FindElement(By.ClassName("getall-selected")).Text;
 
         //CLICKS
-        public void ClickHome() => DemoHomeBtn.Click(); //Demo home button
         public void ClickCheckbox() => Checkbox.Click();
         public void ClickGenderCheck() => GenderCheckButton.Click();
         public void ClickGetValues() => GetValuesButton.Click();
@@ -71,6 +75,36 @@ namespace seleniumeasy_Test.Pages
             return sum = numberOne + numberTwo;
         }
 
+        //Check single select dropdown 
+        public void SelectListTest(int index)
+        {
+            DaysDropdown.SelectByIndex(index);
+            string day = DaysDropdown.SelectedOption.Text;
+            string message = "Day selected :- " + day;
+            Assert.That(DaysDropdown.SelectedOption.Text == day, "Dropdown test failed: Text of the selected option invalid! (" + day + ")");
+            Assert.AreEqual(DropdownMessage.Text, message, "Dropdown message test failed: Message text of the selected option invalid! (" + day + ")");
+        }
 
+        //Check multi select dropdown list
+        public void MultiSelectListTest()
+        {
+            int count = StatesList.Options.Count;
+
+            for (int i = 0; i < count; i++)
+            {
+                //Selects the option 
+                StatesList.SelectByIndex(i);
+                //Calculates the text of the message and stores it
+                string option = "First selected option is : " + StatesList.SelectedOption.Text;
+
+                //Updates message
+                ClickFirstSelected();
+                //Check if texts match
+                Assert.AreEqual(option, MultiMessage, "Multiselect dropdown test failed: Texts do not match! (index " + i + ")");
+                //Deselects previously selected option in this loop
+                StatesList.DeselectByIndex(i);
+            }
+
+        }
     }
 }

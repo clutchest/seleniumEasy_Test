@@ -136,6 +136,7 @@ C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\nunit.framework.dll
+C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\WebDriver.Support.dll
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\WebDriver.dll
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\ICSharpCode.SharpZipLib.dll
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\System.Security.AccessControl.dll
@@ -218,4 +219,3 @@ C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\obj\
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\obj\Debug\netcoreapp3.1\seleniumeasy_Test.dll
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\obj\Debug\netcoreapp3.1\seleniumeasy_Test.pdb
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\obj\Debug\netcoreapp3.1\seleniumeasy_Test.genruntimeconfig.cache
-C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\obj\Debug\netcoreapp3.1\seleniumeasy_Test.csprojAssemblyReference.cache

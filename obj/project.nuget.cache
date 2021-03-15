@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+ZnCTBzyWIx98aTA8dqP/Mm2AzQGNXoOQ0k9CUSRpU0UlxRQLpErrAn0o5CG8ONhswgnlUnhvh/kKsi6CAUJQw==",
+  "dgSpecHash": "OSMikQAM0F+L8ZerejYmh29SigV2sqOqjTHFx0BR2lgiCaiII8Ze8erN7ozczGKtmB9nhyHyoiI0Bdupg3fZBg==",
   "success": true,
   "projectFilePath": "C:\\Users\\38595\\Desktop\\SeleniumEasy Git\\seleniumeasy_Test\\seleniumEasy_Test\\seleniumeasy_Test.csproj",
   "expectedPackageFiles": [
@@ -22,6 +22,7 @@
     "C:\\Users\\38595\\.nuget\\packages\\nunit\\3.13.1\\nunit.3.13.1.nupkg.sha512",
     "C:\\Users\\38595\\.nuget\\packages\\nunit3testadapter\\3.17.0\\nunit3testadapter.3.17.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
+    "C:\\Users\\38595\\.nuget\\packages\\selenium.support\\3.141.0\\selenium.support.3.141.0.nupkg.sha512",
     "C:\\Users\\38595\\.nuget\\packages\\selenium.webdriver\\3.141.0\\selenium.webdriver.3.141.0.nupkg.sha512",
     "C:\\Users\\38595\\.nuget\\packages\\selenium.webdriver.chromedriver\\89.0.4389.2300\\selenium.webdriver.chromedriver.89.0.4389.2300.nupkg.sha512",
     "C:\\Users\\38595\\.nuget\\packages\\sharpziplib\\1.3.1\\sharpziplib.1.3.1.nupkg.sha512",
