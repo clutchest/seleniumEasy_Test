@@ -52,6 +52,13 @@ namespace seleniumeasy_Test.Pages
         public void ClickAllSelected() => Driver.FindElement(By.Id("printAll")).Click();
         public string MultiMessage => Driver.FindElement(By.ClassName("getall-selected")).Text;
 
+        //POPUP BOXES TEST ELEMENTS
+        public void ClickDisplayAlert() => Driver.FindElement(By.XPath("/html/body/div[2]/div/div[2]/div[1]/div[2]/button")).Submit();
+        public void ClickDisplayConfirmBox() => Driver.FindElement(By.CssSelector("#easycont > div > div.col-md-6.text-left > div:nth-child(5) > div.panel-body > button")).Submit();
+        public string ConfirmText => Driver.FindElement(By.Id("confirm-demo")).Text;
+        public void ClickPromptBox() => Driver.FindElement(By.CssSelector("#easycont > div > div.col-md-6.text-left > div:nth-child(6) > div.panel-body > button")).Submit();
+        public IWebElement PromptBox => Driver.FindElement(By.Id("prompt-demo"));
+
         //CLICKS
         public void ClickCheckbox() => Checkbox.Click();
         public void ClickGenderCheck() => GenderCheckButton.Click();

@@ -37,7 +37,7 @@ namespace seleniumeasy_Test.Tests
         }
 
         [Test]
-        public void SelectList()
+        public void SingleSelectList()
         {
             //Finds the dropdown element
             homePage.DaysDropdown = new SelectElement(Driver.FindElement(By.Id("select-demo")));
