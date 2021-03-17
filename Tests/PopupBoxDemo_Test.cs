@@ -16,7 +16,7 @@ namespace seleniumeasy_Test.Tests
         HomePage homePage;
 
         [SetUp]
-        public void SetUp_DropwdownDemo()
+        public void SetUp_PopupBoxDemo()
         {
             ChromeOptions options = new ChromeOptions();
             options.AddArguments("--disable-notifications"); // to disable notification

@@ -29,6 +29,8 @@ namespace seleniumeasy_Test.Pages
         public IWebElement Checkbox => Driver.FindElement(By.Id("isAgeSelected"));
         public IWebElement CheckBoxText => Driver.FindElement(By.CssSelector("#txtAge"));
         public IWebElement CheckAll => Driver.FindElement(By.CssSelector("#check1"));
+        public void ClickCheckbox() => Checkbox.Click();
+
 
         //RADIO BUTTONS TEST ELEMENTS
         public IWebElement RadioButton_Male => Driver.FindElement(By.CssSelector("#easycont > div > div.col-md-6.text-left > div:nth-child(4) > div.panel-body > label:nth-child(2) > input[type=radio]"));
@@ -43,6 +45,8 @@ namespace seleniumeasy_Test.Pages
         public IWebElement AgeGroup1 => Driver.FindElement(By.CssSelector("#easycont > div > div.col-md-6.text-left > div:nth-child(5) > div.panel-body > div:nth-child(3) > label:nth-child(2) > input[type=radio]"));
         public IWebElement AgeGroup2 => Driver.FindElement(By.CssSelector("#easycont > div > div.col-md-6.text-left > div:nth-child(5) > div.panel-body > div:nth-child(3) > label:nth-child(3) > input[type=radio]"));
         public IWebElement AgeGroup3 => Driver.FindElement(By.CssSelector("#easycont > div > div.col-md-6.text-left > div:nth-child(5) > div.panel-body > div:nth-child(3) > label:nth-child(4) > input[type=radio]"));
+        public void ClickGenderCheck() => GenderCheckButton.Click();
+        public void ClickGetValues() => GetValuesButton.Click();
 
         //DROPDOWN TEST ELEMENTS
         public IWebElement DropdownMessage => Driver.FindElement(By.ClassName("selected-value"));
@@ -58,11 +62,25 @@ namespace seleniumeasy_Test.Pages
         public string ConfirmText => Driver.FindElement(By.Id("confirm-demo")).Text;
         public void ClickPromptBox() => Driver.FindElement(By.CssSelector("#easycont > div > div.col-md-6.text-left > div:nth-child(6) > div.panel-body > button")).Submit();
         public IWebElement PromptBox => Driver.FindElement(By.Id("prompt-demo"));
+        public void ClickFollowAll() => Driver.FindElement(By.Id("followall")).Click();
 
-        //CLICKS
-        public void ClickCheckbox() => Checkbox.Click();
-        public void ClickGenderCheck() => GenderCheckButton.Click();
-        public void ClickGetValues() => GetValuesButton.Click();
+        //WINDOW POPUP TEST ELEMENTS
+        public void ClickTwitter() => Driver.FindElement(By.XPath("/html/body/div[2]/div/div[2]/div[1]/div/div[2]/div[1]/a")).Click();
+        public void ClickFacebook() => Driver.FindElement(By.XPath("/html/body/div[2]/div/div[2]/div[1]/div/div[2]/div[2]/a")).Click();
+        public void ClickTwitterAndFacebook() => Driver.FindElement(By.XPath("/html/body/div[2]/div/div[2]/div[2]/div/div[2]/div[1]/a")).Click();
+
+        //BOOTSTRAP MESSAGES
+        public void ClickAutocloseSuccess() => Driver.FindElement(By.CssSelector("#autoclosable-btn-success")).Click();
+        public void ClickNormalSuccess() => Driver.FindElement(By.Id("normal-btn-success")).Click();
+
+        public void ClickAutocloseWarning() => Driver.FindElement(By.Id("autoclosable-btn-warning")).Click();
+        public void ClickNormalWarning() => Driver.FindElement(By.Id("normal-btn-warning")).Click();
+
+        public void ClickAutocloseDanger() => Driver.FindElement(By.Id("autoclosable-btn-danger")).Click();
+        public void ClickNormalDanger() => Driver.FindElement(By.Id("normal-btn-danger")).Click();
+
+        public void ClickAutocloseInfo() => Driver.FindElement(By.Id("autoclosable-btn-info")).Click();
+        public void ClickNormalInfo() => Driver.FindElement(By.Id("normal-btn-info")).Click();
 
         //METHODS
 
