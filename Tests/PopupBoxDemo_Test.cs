@@ -98,5 +98,11 @@ namespace seleniumeasy_Test.Tests
             PromptBox.Accept();
             Assert.That(homePage.PromptBox.Text.Contains(name), "Invalid prompt box message displayed when prompt box is accepted!");
         }
+
+        [TearDown]
+        public void CloseDriver()
+        {
+            Driver.Quit();
+        }
     }
 }
