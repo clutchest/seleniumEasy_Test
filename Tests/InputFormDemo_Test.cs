@@ -35,11 +35,26 @@ namespace seleniumeasy_Test.Tests
             action.SendKeys(Keys.Escape).Build().Perform();
         }
 
-        [Test]
+        [Test] //PRELOŠE
+        
         public void SendWhileEmpty()
-        { 
+        {
+            //Tests if error messages are displayed at the page load
+            if (!homePage.FirstNameMessage.Displayed && !homePage.LastNameMessage.Displayed && !homePage.EmailMessage.Displayed
+                && !homePage.PhoneMessage.Displayed && !homePage.AddressMessage.Displayed && !homePage.CityMessage.Displayed
+                && !homePage.StateMessage.Displayed && !homePage.ProjectDescriptionMessage.Displayed)
+                Assert.Pass();
+            else
+                Assert.Fail("Invalid: One or more error messages displayed when they shouldnt have been!");
+
+            //Press "Send" and check if error messages displayed
             homePage.ClickFormSend();
-            Console.WriteLine(homePage.ErrorMessagesList.Count.ToString());
+            if (homePage.FirstNameMessage.Displayed && homePage.LastNameMessage.Displayed && homePage.EmailMessage.Displayed
+                && homePage.PhoneMessage.Displayed && homePage.AddressMessage.Displayed && homePage.CityMessage.Displayed
+                && homePage.StateMessage.Displayed && homePage.ProjectDescriptionMessage.Displayed)
+                Assert.Pass();
+            else
+                Assert.Fail("Invalid: One or more error messages NOT displayed!");
         }
 
     }

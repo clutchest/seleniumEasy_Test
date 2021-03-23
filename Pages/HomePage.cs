@@ -102,6 +102,19 @@ namespace seleniumeasy_Test.Pages
         public IWebElement ProjectDescription => Driver.FindElement(By.Name("comment"));
         public IList<IWebElement> ErrorMessagesList => Driver.FindElements(By.CssSelector("#contact_form > fieldset > div:nth-child(2) > div > small:nth-child(4)"));
         public void ClickFormSend() => Driver.FindElement(By.CssSelector("#contact_form > fieldset > div:nth-child(14) > div > button")).Click();
+
+        //Error messages
+        public IWebElement FirstNameMessage => Driver.FindElement(By.CssSelector("#contact_form > fieldset > div:nth-child(2) > div > small:nth-child(4)"));
+        public IWebElement LastNameMessage => Driver.FindElement(By.CssSelector("#contact_form > fieldset > div:nth-child(3) > div > small:nth-child(4)"));
+        public IWebElement EmailMessage => Driver.FindElement(By.CssSelector("#contact_form > fieldset > div:nth-child(4) > div > small:nth-child(3)"));
+        public IWebElement PhoneMessage => Driver.FindElement(By.CssSelector("#contact_form > fieldset > div:nth-child(5) > div > small:nth-child(3)"));
+        public IWebElement AddressMessage => Driver.FindElement(By.CssSelector("#contact_form > fieldset > div:nth-child(6) > div > small:nth-child(4)"));
+        public IWebElement CityMessage => Driver.FindElement(By.CssSelector("#contact_form > fieldset > div:nth-child(7) > div > small:nth-child(4)"));
+        public IWebElement StateMessage => Driver.FindElement(By.CssSelector("#contact_form > fieldset > div:nth-child(7) > div > small:nth-child(4)"));
+        public IWebElement ProjectDescriptionMessage => Driver.FindElement(By.CssSelector("#contact_form > fieldset > div:nth-child(12) > div > small:nth-child(4)"));
+
+
+
         #endregion
 
 
