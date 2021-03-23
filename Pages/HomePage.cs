@@ -16,7 +16,7 @@ namespace seleniumeasy_Test.Pages
             Driver = webDriver;
         }
 
-        //SIMPLE FORM TEST ELEMENTS
+        #region //SIMPLE FORM TEST ELEMENTS
         public int sum;
         public IWebElement MessageField => Driver.FindElement(By.TagName("input"));
         public IWebElement ShowMessageBtn => Driver.FindElement(By.CssSelector("#get-input > button"));
@@ -24,15 +24,16 @@ namespace seleniumeasy_Test.Pages
         public IWebElement NumberOne => Driver.FindElement(By.Id("sum1"));
         public IWebElement NumberTwo => Driver.FindElement(By.Id("sum2"));
         public IWebElement ExpectedSum => Driver.FindElement(By.Id("displayvalue"));
+        #endregion
 
-        //CHECKBOX TEST ELEMENTS
+        #region //CHECKBOX TEST ELEMENTS
         public IWebElement Checkbox => Driver.FindElement(By.Id("isAgeSelected"));
         public IWebElement CheckBoxText => Driver.FindElement(By.CssSelector("#txtAge"));
         public IWebElement CheckAll => Driver.FindElement(By.CssSelector("#check1"));
         public void ClickCheckbox() => Checkbox.Click();
+        #endregion
 
-
-        //RADIO BUTTONS TEST ELEMENTS
+        #region //RADIO BUTTONS TEST ELEMENTS
         public IWebElement RadioButton_Male => Driver.FindElement(By.CssSelector("#easycont > div > div.col-md-6.text-left > div:nth-child(4) > div.panel-body > label:nth-child(2) > input[type=radio]"));
         public IWebElement RadioButton_Female => Driver.FindElement(By.CssSelector("#easycont > div > div.col-md-6.text-left > div:nth-child(4) > div.panel-body > label:nth-child(3) > input[type=radio]"));
         public IWebElement GenderCheckButton => Driver.FindElement(By.Id("buttoncheck"));
@@ -47,29 +48,34 @@ namespace seleniumeasy_Test.Pages
         public IWebElement AgeGroup3 => Driver.FindElement(By.CssSelector("#easycont > div > div.col-md-6.text-left > div:nth-child(5) > div.panel-body > div:nth-child(3) > label:nth-child(4) > input[type=radio]"));
         public void ClickGenderCheck() => GenderCheckButton.Click();
         public void ClickGetValues() => GetValuesButton.Click();
+        #endregion
 
-        //DROPDOWN TEST ELEMENTS
+        #region //DROPDOWN TEST ELEMENTS
         public IWebElement DropdownMessage => Driver.FindElement(By.ClassName("selected-value"));
         public SelectElement DaysDropdown;
         public SelectElement StatesList;
         public void ClickFirstSelected() => Driver.FindElement(By.Id("printMe")).Click();
         public void ClickAllSelected() => Driver.FindElement(By.Id("printAll")).Click();
         public string MultiMessage => Driver.FindElement(By.ClassName("getall-selected")).Text;
+        #endregion
 
-        //POPUP BOXES TEST ELEMENTS
+        #region //POPUP BOXES TEST ELEMENTS
         public void ClickDisplayAlert() => Driver.FindElement(By.XPath("/html/body/div[2]/div/div[2]/div[1]/div[2]/button")).Submit();
         public void ClickDisplayConfirmBox() => Driver.FindElement(By.CssSelector("#easycont > div > div.col-md-6.text-left > div:nth-child(5) > div.panel-body > button")).Submit();
         public string ConfirmText => Driver.FindElement(By.Id("confirm-demo")).Text;
         public void ClickPromptBox() => Driver.FindElement(By.CssSelector("#easycont > div > div.col-md-6.text-left > div:nth-child(6) > div.panel-body > button")).Submit();
         public IWebElement PromptBox => Driver.FindElement(By.Id("prompt-demo"));
         public void ClickFollowAll() => Driver.FindElement(By.Id("followall")).Click();
+        #endregion
 
-        //WINDOW POPUP TEST ELEMENTS
+        #region //WINDOW POPUP TEST ELEMENTS
         public void ClickTwitter() => Driver.FindElement(By.XPath("/html/body/div[2]/div/div[2]/div[1]/div/div[2]/div[1]/a")).Click();
         public void ClickFacebook() => Driver.FindElement(By.XPath("/html/body/div[2]/div/div[2]/div[1]/div/div[2]/div[2]/a")).Click();
         public void ClickTwitterAndFacebook() => Driver.FindElement(By.XPath("/html/body/div[2]/div/div[2]/div[2]/div/div[2]/div[1]/a")).Click();
+        #endregion
 
-        //BOOTSTRAP MESSAGES
+        #region //BOOTSTRAP MESSAGES
+
         public void ClickAutocloseSuccess() => Driver.FindElement(By.CssSelector("#autoclosable-btn-success")).Click();
         public void ClickNormalSuccess() => Driver.FindElement(By.Id("normal-btn-success")).Click();
 
@@ -81,6 +87,24 @@ namespace seleniumeasy_Test.Pages
 
         public void ClickAutocloseInfo() => Driver.FindElement(By.Id("autoclosable-btn-info")).Click();
         public void ClickNormalInfo() => Driver.FindElement(By.Id("normal-btn-info")).Click();
+        #endregion
+
+        #region //INPUT FORM ELEMENTS
+        public IWebElement FirstName => Driver.FindElement(By.Name("first_name"));
+        public IWebElement LastName => Driver.FindElement(By.Name("last_name"));
+        public IWebElement Email => Driver.FindElement(By.Name("email"));
+        public IWebElement Phone => Driver.FindElement(By.Name("phone"));
+        public IWebElement Address => Driver.FindElement(By.Name("address"));
+        public IWebElement City => Driver.FindElement(By.Name("city"));
+        public IWebElement State => Driver.FindElement(By.Name("state"));
+        public IWebElement ZipCode => Driver.FindElement(By.Name("zip"));
+        public IWebElement Website => Driver.FindElement(By.Name("website"));
+        public IWebElement ProjectDescription => Driver.FindElement(By.Name("comment"));
+        public IList<IWebElement> ErrorMessagesList => Driver.FindElements(By.CssSelector("#contact_form > fieldset > div:nth-child(2) > div > small:nth-child(4)"));
+        public void ClickFormSend() => Driver.FindElement(By.CssSelector("#contact_form > fieldset > div:nth-child(14) > div > button")).Click();
+        #endregion
+
+
 
         //METHODS
 
