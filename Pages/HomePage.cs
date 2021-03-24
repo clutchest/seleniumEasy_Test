@@ -113,7 +113,7 @@ namespace seleniumeasy_Test.Pages
         public IWebElement StateMessage => Driver.FindElement(By.CssSelector("#contact_form > fieldset > div:nth-child(7) > div > small:nth-child(4)"));
         public IWebElement ProjectDescriptionMessage => Driver.FindElement(By.CssSelector("#contact_form > fieldset > div:nth-child(12) > div > small:nth-child(4)"));
 
-
+        public void Refresh() => Driver.Navigate().Refresh();
 
         #endregion
 

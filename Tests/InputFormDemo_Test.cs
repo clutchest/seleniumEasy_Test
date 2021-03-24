@@ -7,6 +7,7 @@ using seleniumeasy_Test.Pages;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace seleniumeasy_Test.Tests
 {
@@ -55,6 +56,42 @@ namespace seleniumeasy_Test.Tests
                 Assert.Pass();
             else
                 Assert.Fail("Invalid: One or more error messages NOT displayed!");
+        }
+
+        [Test]
+        public void InputThenSend()
+        {
+            homePage.FirstName.SendKeys("Fran");
+            homePage.ClickFormSend();
+            Assert.AreEqual(false, homePage.FirstNameMessage.Displayed, "First name text error! " + homePage.FirstNameMessage.Text);
+            homePage.Refresh();
+            Thread.Sleep(1000);
+
+            homePage.LastName.SendKeys("Kirby");
+            homePage.ClickFormSend();
+            Assert.AreEqual(false, homePage.LastNameMessage.Displayed, "Last name text error! " + homePage.LastNameMessage.Text);
+            homePage.Refresh();
+            Thread.Sleep(1000);
+
+            homePage.Email.SendKeys("frankirby@gmail.com");
+            homePage.ClickFormSend();
+            Assert.AreEqual(false, homePage.EmailMessage.Displayed, "Email text error! " + homePage.EmailMessage.Text);
+            homePage.Refresh();
+            Thread.Sleep(1000);
+
+            homePage.Phone.SendKeys("0919391777");
+            homePage.ClickFormSend();
+            Assert.AreEqual(false, homePage.PhoneMessage.Displayed, "Phone number error! " + homePage.PhoneMessage.Text);
+            homePage.Refresh();
+            Thread.Sleep(1000);
+
+            homePage.Address.SendKeys("Fulham Road 19");
+            homePage.ClickFormSend();
+            Assert.AreEqual(false, homePage.AddressMessage.Displayed, "Address text error! " + homePage.AddressMessage.Text);
+            homePage.Refresh();
+            Thread.Sleep(1000);
+
+
         }
 
     }
