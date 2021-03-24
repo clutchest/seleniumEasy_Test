@@ -96,7 +96,7 @@ namespace seleniumeasy_Test.Pages
         public IWebElement Phone => Driver.FindElement(By.Name("phone"));
         public IWebElement Address => Driver.FindElement(By.Name("address"));
         public IWebElement City => Driver.FindElement(By.Name("city"));
-        public IWebElement State => Driver.FindElement(By.Name("state"));
+        public SelectElement State => new SelectElement(Driver.FindElement(By.Name("state")));
         public IWebElement ZipCode => Driver.FindElement(By.Name("zip"));
         public IWebElement Website => Driver.FindElement(By.Name("website"));
         public IWebElement ProjectDescription => Driver.FindElement(By.Name("comment"));
@@ -111,14 +111,20 @@ namespace seleniumeasy_Test.Pages
         public IWebElement AddressMessage => Driver.FindElement(By.CssSelector("#contact_form > fieldset > div:nth-child(6) > div > small:nth-child(4)"));
         public IWebElement CityMessage => Driver.FindElement(By.CssSelector("#contact_form > fieldset > div:nth-child(7) > div > small:nth-child(4)"));
         public IWebElement StateMessage => Driver.FindElement(By.CssSelector("#contact_form > fieldset > div:nth-child(7) > div > small:nth-child(4)"));
+        public IWebElement ZipCodeMessage => Driver.FindElement(By.CssSelector("#contact_form > fieldset > div:nth-child(9) > div > small:nth-child(3)"));
         public IWebElement ProjectDescriptionMessage => Driver.FindElement(By.CssSelector("#contact_form > fieldset > div:nth-child(12) > div > small:nth-child(4)"));
 
         public void Refresh() => Driver.Navigate().Refresh();
-
         #endregion
 
+        #region //AJAX FORM SUBMIT
+        public IWebElement Title => Driver.FindElement(By.Id("title"));
+        public IWebElement Description => Driver.FindElement(By.Id("description"));
+        public void ClickAjaxSubmit() => Driver.FindElement(By.CssSelector("#btn-submit")).Click();
+        public IWebElement AjaxFormMessage => Driver.FindElement(By.Id("submit-control"));
+        public IWebElement AjaxSubmitButton => Driver.FindElement(By.Id("btn-submit"));
 
-
+        #endregion
         //METHODS
 
         //Single field message input and click "Show Message"
