@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using seleniumeasy_Test.Tests;
 using System;
@@ -117,7 +118,7 @@ namespace seleniumeasy_Test.Pages
         public void Refresh() => Driver.Navigate().Refresh();
         #endregion
 
-        #region //AJAX FORM SUBMIT
+        #region //AJAX FORM SUBMIT ELEMENTS
         public IWebElement Title => Driver.FindElement(By.Id("title"));
         public IWebElement Description => Driver.FindElement(By.Id("description"));
         public void ClickAjaxSubmit() => Driver.FindElement(By.CssSelector("#btn-submit")).Click();
@@ -125,6 +126,23 @@ namespace seleniumeasy_Test.Pages
         public IWebElement AjaxSubmitButton => Driver.FindElement(By.Id("btn-submit"));
 
         #endregion
+
+        #region //JQUERY DROPDOWN WITH SEARCH ELEMENTS
+
+        //SINGLE
+        public SelectElement Dropdown;
+        public IReadOnlyCollection<IWebElement> DropdownStates;
+        public IWebElement SearchJQuery => Driver.FindElement(By.CssSelector("body > span > span > span.select2-search.select2-search--dropdown > input"));
+        public void ClickShowDropdown() => Driver.FindElement(By.ClassName("select2-selection__arrow")).Click();
+        public IWebElement Selected => Driver.FindElement(By.ClassName("select2-selection__rendered"));
+        #endregion
+        #region //DUAL LIST BOX EXAMPLE
+        public IReadOnlyCollection<IWebElement> LeftBox => Driver.FindElements(By.CssSelector("body > div.container-fluid.text-center > div > div.col-md-6.text-left > div > div.dual-list.list-left.col-md-5 > div > ul"));
+        public IReadOnlyCollection<IWebElement> RightBox => Driver.FindElements(By.CssSelector("body > div.container-fluid.text-center > div > div.col-md-6.text-left > div > div.dual-list.list-right.col-md-5 > div > ul"));
+        
+        #endregion
+
+
         //METHODS
 
         //Single field message input and click "Show Message"
@@ -174,5 +192,22 @@ namespace seleniumeasy_Test.Pages
             }
 
         }
+
+        //Hardcoded method for pressing enter key
+        public void PressEnter()
+        {
+            Actions PressEnter = new Actions(Driver);
+            PressEnter.SendKeys(Keys.Enter).Build().Perform();
+        }
+        //Select single select country
+        public void SingleSelect(string country)
+        {
+            ClickShowDropdown();
+            SearchJQuery.SendKeys(country);
+            PressEnter();
+
+            Assert.AreEqual(country, Selected.GetAttribute("title").ToString(), "Invalid country selected! Involving: " + Selected.GetAttribute("title").ToString()); ;
+        }
+
     }
 }
