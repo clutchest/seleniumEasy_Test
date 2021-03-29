@@ -111,12 +111,6 @@ C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\obj\Debug\netcoreapp3.
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\testhost.dll
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\testhost.exe
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.PlatformAbstractions.dll
-C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CoreUtilities.dll
-C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
-C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CommunicationUtilities.dll
-C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CrossPlatEngine.dll
-C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.Common.dll
-C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.dll
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\NUnit3.TestAdapter.pdb
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\nunit.engine.dll
@@ -132,8 +126,14 @@ C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\SeleniumExtras.WaitHelpers.dll
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\Microsoft.DotNet.InternalAbstractions.dll
+C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CoreUtilities.dll
+C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll
+C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CommunicationUtilities.dll
+C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.CrossPlatEngine.dll
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\Microsoft.TestPlatform.Utilities.dll
+C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.TestPlatform.Common.dll
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\Microsoft.Win32.Registry.dll
+C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\nunit.framework.dll
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\bin\Debug\netcoreapp3.1\WebDriver.Support.dll
@@ -219,4 +219,3 @@ C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\obj\
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\obj\Debug\netcoreapp3.1\seleniumeasy_Test.dll
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\obj\Debug\netcoreapp3.1\seleniumeasy_Test.pdb
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\obj\Debug\netcoreapp3.1\seleniumeasy_Test.genruntimeconfig.cache
-C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\obj\Debug\netcoreapp3.1\seleniumeasy_Test.csprojAssemblyReference.cache

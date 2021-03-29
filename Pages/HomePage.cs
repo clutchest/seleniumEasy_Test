@@ -124,7 +124,6 @@ namespace seleniumeasy_Test.Pages
         public void ClickAjaxSubmit() => Driver.FindElement(By.CssSelector("#btn-submit")).Click();
         public IWebElement AjaxFormMessage => Driver.FindElement(By.Id("submit-control"));
         public IWebElement AjaxSubmitButton => Driver.FindElement(By.Id("btn-submit"));
-
         #endregion
 
         #region //JQUERY DROPDOWN WITH SEARCH ELEMENTS
@@ -135,11 +134,24 @@ namespace seleniumeasy_Test.Pages
         public IWebElement SearchJQuery => Driver.FindElement(By.CssSelector("body > span > span > span.select2-search.select2-search--dropdown > input"));
         public void ClickShowDropdown() => Driver.FindElement(By.ClassName("select2-selection__arrow")).Click();
         public IWebElement Selected => Driver.FindElement(By.ClassName("select2-selection__rendered"));
+
+        //MULTI
+        public IWebElement StateSearchbox => Driver.FindElement(By.ClassName("select2-search__field"));
+        //<select class>
+        public SelectElement Select => new SelectElement(Driver.FindElement(By.CssSelector("body > div.container-fluid.text-center > div > div.col-md-6.text-left > div:nth-child(3) > div > div.panel-body > select")));
+        public IReadOnlyCollection<IWebElement> SelectedStates => Driver.FindElements(By.ClassName("select2-selection__choice"));
+
+        //WITH DISABLED OPTIONS
+        public SelectElement DisabledSelect => new SelectElement(Driver.FindElement(By.CssSelector("body > div.container-fluid.text-center > div > div.col-md-6.text-left > div:nth-child(4) > div > div.panel-body > select")));
+        
+        
         #endregion
+
         #region //DUAL LIST BOX EXAMPLE
         public IReadOnlyCollection<IWebElement> LeftBox => Driver.FindElements(By.CssSelector("body > div.container-fluid.text-center > div > div.col-md-6.text-left > div > div.dual-list.list-left.col-md-5 > div > ul"));
         public IReadOnlyCollection<IWebElement> RightBox => Driver.FindElements(By.CssSelector("body > div.container-fluid.text-center > div > div.col-md-6.text-left > div > div.dual-list.list-right.col-md-5 > div > ul"));
         
+
         #endregion
 
 
@@ -199,15 +211,30 @@ namespace seleniumeasy_Test.Pages
             Actions PressEnter = new Actions(Driver);
             PressEnter.SendKeys(Keys.Enter).Build().Perform();
         }
-        //Select single select country
+        //Test single select country
         public void SingleSelect(string country)
         {
             ClickShowDropdown();
             SearchJQuery.SendKeys(country);
             PressEnter();
-
             Assert.AreEqual(country, Selected.GetAttribute("title").ToString(), "Invalid country selected! Involving: " + Selected.GetAttribute("title").ToString()); ;
         }
-
+        //Test multiple select states
+        public void JQueryMultiSelectTest(string value, string state)
+        {
+            Select.SelectByValue(value);
+            foreach (IWebElement stater in SelectedStates)
+            {
+                Assert.AreEqual(stater.GetAttribute("title"), state.ToString(), "Invalid: State not addable! " + stater.GetAttribute("title"));
+            }
+            Select.DeselectAll();
+        }
+        //Test dropdown with disabled states
+        public void DropdownWithDisabled(string value, string state)
+        {
+            DisabledSelect.SelectByValue(value);
+            Assert.AreEqual(state, DisabledSelect.SelectedOption.Text, "Invalid: Problem with dropdown with disabled values!");
+            //Console.WriteLine(DisabledSelect.SelectedOption.GetAttribute("title").ToString());
+        }
     }
 }

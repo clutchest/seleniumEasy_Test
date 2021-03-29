@@ -51,10 +51,59 @@ namespace seleniumeasy_Test.Tests
             homePage.SingleSelect("United States of America");
         }
 
+        [Test]
+        public void JQueryMultiSelect()
+        {
+            homePage.JQueryMultiSelectTest("AL", "Alabama");
+            homePage.JQueryMultiSelectTest("AK", "Alaska");
+            homePage.JQueryMultiSelectTest("AZ", "Arizona");
+            homePage.JQueryMultiSelectTest("AR", "Arkansas");
+            homePage.JQueryMultiSelectTest("CA", "California");
+            homePage.JQueryMultiSelectTest("CO", "Colorado");
+            homePage.JQueryMultiSelectTest("CT", "Connecticut");
+            homePage.JQueryMultiSelectTest("DE", "Delaware");
+            homePage.JQueryMultiSelectTest("DC", "District Of Columbia");
+            homePage.JQueryMultiSelectTest("FL", "Florida");
+            homePage.JQueryMultiSelectTest("GA", "Georgia");
+            homePage.JQueryMultiSelectTest("HI", "Hawaii");
+            homePage.JQueryMultiSelectTest("ID", "Idaho");
+            homePage.JQueryMultiSelectTest("IL", "Illinois");
+            homePage.JQueryMultiSelectTest("IN", "Indiana");
+            homePage.JQueryMultiSelectTest("IA", "Iowa");
+            homePage.JQueryMultiSelectTest("KS", "Kansas");
+            homePage.JQueryMultiSelectTest("KY", "Kentucky");
+            homePage.JQueryMultiSelectTest("LA", "Louisiana");
+            homePage.JQueryMultiSelectTest("ME", "Maine");
+            homePage.JQueryMultiSelectTest("MD", "Maryland");
+            homePage.JQueryMultiSelectTest("MA", "Massachusetts");
+            homePage.JQueryMultiSelectTest("MI", "Michigan");
+            homePage.JQueryMultiSelectTest("MN", "Minnesota");
+            homePage.JQueryMultiSelectTest("MS", "Mississippi");
+            homePage.JQueryMultiSelectTest("MO", "Missouri");
+            homePage.JQueryMultiSelectTest("MT", "Montana");
+            homePage.JQueryMultiSelectTest("NE", "Nebraska");
+            homePage.JQueryMultiSelectTest("NV", "Nevada");
+            Console.WriteLine("Valid: Every state is addable!");
+
+        }
+
+        [Test]
+        public void DropdownWithDisabledValues()
+        {
+            homePage.DropdownWithDisabled("AS", "American Samoa");
+            homePage.DropdownWithDisabled("MP", "Northern Mariana Islands");
+            homePage.DropdownWithDisabled("PR", "Puerto Rico");
+            homePage.DropdownWithDisabled("VI", "Virgin Islands");
+        }
+
+
         [TearDown]
         public void CloseDriver()
         {
             Driver.Quit();
         }
     }
+								
+
+                                
 }
