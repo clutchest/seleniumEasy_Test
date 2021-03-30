@@ -143,15 +143,20 @@ namespace seleniumeasy_Test.Pages
 
         //WITH DISABLED OPTIONS
         public SelectElement DisabledSelect => new SelectElement(Driver.FindElement(By.CssSelector("body > div.container-fluid.text-center > div > div.col-md-6.text-left > div:nth-child(4) > div > div.panel-body > select")));
-        
-        
+
+
         #endregion
 
         #region //DUAL LIST BOX EXAMPLE
-        public IReadOnlyCollection<IWebElement> LeftBox => Driver.FindElements(By.CssSelector("body > div.container-fluid.text-center > div > div.col-md-6.text-left > div > div.dual-list.list-left.col-md-5 > div > ul"));
-        public IReadOnlyCollection<IWebElement> RightBox => Driver.FindElements(By.CssSelector("body > div.container-fluid.text-center > div > div.col-md-6.text-left > div > div.dual-list.list-right.col-md-5 > div > ul"));
+        public IReadOnlyCollection<IWebElement> AllItems => Driver.FindElements(By.ClassName("list-group-item"));
+        //Left and right box of items needed for checking "move" button
+        public IWebElement LeftBoxHolder => Driver.FindElement(By.CssSelector("body > div.container-fluid.text-center > div > div.col-md-6.text-left > div > div.dual-list.list-left.col-md-5 > div > ul"));
+        public IWebElement RightBoxHolder => Driver.FindElement(By.CssSelector("body > div.container-fluid.text-center > div > div.col-md-6.text-left > div > div.dual-list.list-right.col-md-5 > div > ul"));
+        public IReadOnlyCollection<IWebElement> LeftBoxItems => LeftBoxHolder.FindElements(By.ClassName("list-group-item"));
+        public IReadOnlyCollection<IWebElement> RightBoxItems => RightBoxHolder.FindElements(By.ClassName("list-group-item"));
+        public void ClickMoveRight() => Driver.FindElement(By.CssSelector("body > div.container-fluid.text-center > div > div.col-md-6.text-left > div > div.list-arrows.col-md-1.text-center > button.btn.btn-default.btn-sm.move-right")).Click();
+        public void ClickMoveLeft() => Driver.FindElement(By.CssSelector("body > div.container-fluid.text-center > div > div.col-md-6.text-left > div > div.list-arrows.col-md-1.text-center > button.btn.btn-default.btn-sm.move-left > span")).Click();
         
-
         #endregion
 
 
