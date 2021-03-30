@@ -219,3 +219,4 @@ C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\obj\
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\obj\Debug\netcoreapp3.1\seleniumeasy_Test.dll
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\obj\Debug\netcoreapp3.1\seleniumeasy_Test.pdb
 C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\obj\Debug\netcoreapp3.1\seleniumeasy_Test.genruntimeconfig.cache
+C:\Users\38595\Desktop\SeleniumEasy Git\seleniumeasy_Test\seleniumEasy_Test\obj\Debug\netcoreapp3.1\seleniumeasy_Test.csprojAssemblyReference.cache
